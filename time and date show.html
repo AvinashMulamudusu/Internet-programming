@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Solution 11.2</title>
+		<script type = "text/javascript">
+			function printNow()
+			{
+				var curr = new Date();
+				window.alert("The time and date are: " + curr.toString());
+			}
+ 
+			function printYesterday() 
+			{
+				var yesterday = new Date();
+				yesterday.setTime(yesterday.valueOf() - 24 * 60 * 60 * 1000);
+				window.alert("24 hours age, the time and date were: " + yesterday.toString());
+			}
+ 
+			function printTenYears()
+			{	
+				var tenYears = new Date();
+				tenYears.setTime(tenYears.valueOf() - 10 * 365 * 24 * 60 * 60 * 1000);
+				window.alert("10 years ago, the time and date were: " + tenYears.toString());
+			}
+ 
+			function printOneWeek()
+			{	
+				var oneWeek = new Date();
+				oneWeek.setTime(oneWeek.valueOf() + 7 * 24 * 60 * 60 * 1000);
+				window.alert("In one week, the time and date will be: " + oneWeek.toString());
+			}
+		</script>
+	</head>
+ 
+	<body>
+		<form action = "">
+		<div>
+			<input type="button" value="Now" onclick="printNow()" />
+			<input type="button" value="Yesterday" onclick="printYesterday()" />
+			<input type="button" value="Ten Years Ago" onclick="printTenYears()" />
+			<input type="button" value="In One Week" onclick="printOneWeek()" />
+		</div>
+		</form>
+	</body>
+ 
+</html>
